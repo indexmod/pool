@@ -1,19 +1,10 @@
 <!--
-██████╗ ██╗      █████╗ ██╗   ██╗███████╗██████╗
-██╔══██╗██║     ██╔══██╗██║   ██║██╔════╝██╔══██╗
-██████╔╝██║     ███████║██║   ██║█████╗  ██████╔╝
-██╔═══╝ ██║     ██╔══██║╚██╗ ██╔╝██╔══╝  ██╔══██╗
-██║     ███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
-╚═╝     ╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
-
-Player is a minimalist web audio player with a black screen, animated grid, and random sound playback.
-
-⚡ Tapping or clicking triggers a white flash and plays a random audio file from the repository.
-
-🔁 When a track ends, a new random one starts automatically.
-
-Тапни по воде чтобы переключить музыку для Сережи в бассейне
-
+██████╗  ██████╗  ██████╗ ██╗         ██████╗  ██████╗  ██████╗ ██╗
+██╔══██╗██╔═══██╗██╔═══██╗██║         ██╔══██╗██╔═══██╗██╔═══██╗██║
+██████╔╝██║   ██║██║   ██║██║         ██████╔╝██║   ██║██║   ██║██║
+██╔═══╝ ██║   ██║██║   ██║██║         ██╔═══╝ ██║   ██║██║   ██║██║
+██║     ╚██████╔╝╚██████╔╝███████╗    ██║     ╚██████╔╝╚██████╔╝███████╗
+╚═╝      ╚═════╝  ╚═════╝ ╚══════╝    ╚═╝      ╚═════╝  ╚═════╝ ╚══════╝
 -->
 
 <!DOCTYPE html>
@@ -22,12 +13,12 @@ Player is a minimalist web audio player with a black screen, animated grid, and 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Player (Сережа в бассейне) by Andr oDei</title>
+  <title>P O O L by Andr oDei</title>
   <meta name="description" content="Тапни по воде чтобы переключить музыку для Сережи в бассейне">
-  <meta property="og:title" content="Player (Сережа в бассейне) by Andr oDei">
+  <meta property="og:title" content="P O O L by Andr oDei">
   <meta property="og:description" content="Тапни по воде чтобы переключить музыку для Сережи в бассейне">
-  <meta property="og:image" content="https://player.indexmod.xyz/ball.png">
-  <meta property="og:url" content="https://player.indexmod.xyz">
+  <meta property="og:image" content="/ball.png">
+  <meta property="og:url" content="https://pool.indexmod.xyz">
   <meta property="og:type" content="website">
 
   <!-- Favicons -->
@@ -39,7 +30,7 @@ Player is a minimalist web audio player with a black screen, animated grid, and 
   <link rel="shortcut icon" href="/favicons/favicon.ico">
   <link rel="manifest" href="/favicons/site.webmanifest">
   <meta name="theme-color" content="#000000" />
-  <meta name="apple-mobile-web-app-title" content="Player by Andr oDei">
+  <meta name="apple-mobile-web-app-title" content="P O O L">
 
   <style>
     html, body {
@@ -90,24 +81,23 @@ Player is a minimalist web audio player with a black screen, animated grid, and 
     }
 
     #bouncer {
-  position: fixed;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  z-index: 100;
-  pointer-events: none;
-}
-
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      z-index: 100;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
   <svg id="grid"></svg>
   <div id="player-screen"></div>
   <div id="flash"></div>
-  <img id="bouncer" src="ball.png" alt="ball">
+  <img id="bouncer" src="/ball.png" alt="ball">
 
   <script>
-    const repo = "indexmod/player";
+    const repo = "indexmod/pool";
     let audioFiles = [];
     let currentAudioIndex = 0;
     const audioElement = new Audio();
@@ -159,7 +149,6 @@ Player is a minimalist web audio player with a black screen, animated grid, and 
       animate();
     });
 
-    // Оригинальная сетка
     const cols = 40;
     const rows = 40;
     const spacing = 40;
